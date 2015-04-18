@@ -5,7 +5,7 @@ public class Main {
         String test;
         Scanner k = new Scanner(System.in);
         System.out.println("Hello world!");
-        System.out.print("Please input: ");
+        System.out.print("Please isdfsadfdsafsfdsdfsdfsdfnput: ");
         test = k.next();
         System.out.println("Your input: " + test);
     }
