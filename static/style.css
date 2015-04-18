@@ -1,0 +1,134 @@
+/**
+ * style.css (https://github.com/chjj/tty.js)
+ * Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Source Code Pro, 微軟正黑體;
+}
+
+html {
+  background: #fff;
+}
+
+html.maximized {
+  overflow: hidden;
+}
+
+#code {
+  font-family: Source Code Pro, 微軟正黑體;
+  width: 800px;
+  height: 300px;
+  position: absolute;
+  top: 80px;
+  left: 28%;
+}
+
+/* Only allow plaintext?
+[contenteditable=""],
+[contenteditable="true"] {
+  -webkit-user-modify: read-write-plaintext-only !important;
+}
+*/
+
+/**
+ * Terminal
+ */
+
+.window {
+  padding-top: 15px;
+  border: #fafafa solid 1px;
+  background: #272829;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 20px;
+  /*display: none;*/
+}
+
+.maximized .window {
+  border: none;
+  box-shadow: none;
+}
+
+.title {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  font-size: 11px;
+  cursor: default;
+}
+
+.grip {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  cursor: se-resize;
+  z-index: -1;
+  background: transparent;
+}
+
+.terminal {
+  border: #000 solid 5px;
+  font-family: "Source Code Pro", monospace, "微軟正黑體";
+  font-size: 14px;
+  color: #f0f0f0;
+  background: #000;
+}
+
+.reverse-video {
+  color: #000;
+  background: #f0f0f0;
+}
+
+/**
+ * Page
+ */
+
+h1 {
+  font: 20px/1.5 sans-serif;
+  background: #333;
+  margin: -25px -25px 0 -25px;
+  height: 30px;
+  padding: 10px 25px;
+  color: white;
+  border-top: #e15729 solid 10px;
+}
+
+#open {
+  font-size: 20px;
+  line-height: 2;
+  position: fixed;
+  right: 20px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  margin: 0;
+  background: none;
+  border: 3px solid #F00;
+  -webkit-appearance: none;
+}
+
+#open {
+  top: 10px;
+  background: #333;
+}
+
+#open:hover{
+  color: slategrey;
+  background: white;
+}
+
+#open:active{
+  color: orange;
+}
+
+#run {
+  top: -9999px;
+  display: none;
+}
