@@ -2,7 +2,7 @@ var tty = require('tty.js');
 
 var app = tty.createServer({
   shell: 'bash',
-  port: process.env.PROT
+  port: 80
 });
 
 app.get('/', function(req, res, next) {
