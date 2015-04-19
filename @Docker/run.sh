@@ -1,6 +1,7 @@
 read -p "" nothing
 echo "正在編譯…"
-cp /data/javahome/Main.java /data/Main.java
+cp /data/mounted/Main.java /data/Main.java
+cp /data/mounted/ans /data/ans
 if [ -f "/data/Main.java" ]
 then
     javac /data/Main.java
