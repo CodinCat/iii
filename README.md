@@ -5,9 +5,11 @@
 
 ##server.js
 啟動 node.js 伺服器 （預設為 8080 port）
+(在 node_modules/tty.js/lib/tty.js 的 241 行呼叫)
 
 ##rundocker.sh
 將存下來的 java 檔掛載到 docker 並在 docker 中啟動 interactive bash
+(在 node_modules/tty.js/lib/tty.js 的 241 行呼叫)
 
 ##@Docker/
 目前在這個 docker image 中用到的檔案
@@ -25,5 +27,4 @@
 
 ##static/
 網頁前端檔案
-
 
