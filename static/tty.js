@@ -84,7 +84,7 @@ tty.open = function() {
   editor.getSession().setMode("ace/mode/java");
   
   function continueRun() {
-    if (document.getElementsByClassName('terminal')[0].innerHTML.search('@UserPC') !== -1) {
+    if (document.getElementsByClassName('terminal')[0].innerHTML.search('root@') !== -1) {
         document.getElementById('run').click();
       } else {
         setTimeout(function(){
@@ -96,7 +96,6 @@ tty.open = function() {
   var run = document.getElementById('run');
   on(run, 'click', function() {
     tty.socket.emit('run', theOnlyID, editor.getValue());
-    //tty.socket.emit('kill', theOnlyID);
   });
 
   if (open) {
