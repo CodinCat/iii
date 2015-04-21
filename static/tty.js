@@ -84,18 +84,30 @@ tty.open = function() {
   editor.getSession().setMode("ace/mode/java");
   
   function continueRun() {
+    document.getElementsByClassName('window')[0].style.display = "none";
     if (document.getElementsByClassName('terminal')[0].innerHTML.search('root@') !== -1) {
-        document.getElementById('run').click();
-      } else {
-        setTimeout(function(){
-          continueRun();
-        }, 100);
-      }
+      document.getElementById('run').click();
+    } else {
+      setTimeout(function(){
+        continueRun();
+      }, 100);
+    }
+  }
+
+  function checkStatus() {
+    if (document.getElementsByClassName('terminal')[0].innerHTML.search('run.sh') !== -1) {
+      document.getElementsByClassName('window')[0].style.display = "block";
+    } else {
+      setTimeout(function(){
+        checkStatus();
+      }, 200);
+    }
   }
 
   var run = document.getElementById('run');
   on(run, 'click', function() {
     tty.socket.emit('run', theOnlyID, editor.getValue());
+    checkStatus();
   });
 
   if (open) {
